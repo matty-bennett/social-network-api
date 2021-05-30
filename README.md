@@ -3,18 +3,18 @@
 ## Description
 
 ## Table of Contents
-* [Technologies Used](https://github.com/matty-bennett/ecommerce-backend/blob/main/README.md#technologies-used)
-* [License](https://github.com/matty-bennett/ecommerce-backend/blob/main/README.md#license)
-* [Contributing](https://github.com/matty-bennett/ecommerce-backend/blob/main/README.md#contributing)
-* [Tests](https://github.com/matty-bennett/ecommerce-backend/blob/main/README.md#tests)
-* [Questions](https://github.com/matty-bennett/ecommerce-backend/blob/main/README.md#questions)
+* [Technologies Used](https://github.com/matty-bennett/social-network-api/blob/main/README.md#technologies-used)
+* [License](https://github.com/matty-bennett/social-network-api/blob/main/README.md#License)
+* [Contributing](https://github.com/matty-bennett/social-network-api/blob/main/README.md#contributing)
+* [Tests](https://github.com/matty-bennett/social-network-api/blob/main/README.md#tests)
+* [Questions](https://github.com/matty-bennett/social-network-api/blob/main/README.md#questions)
 
 ## Technologies Used
 - Javascript
 - Mongo
 - Express.js
 
-## license 
+## License 
 No licenses used for this project.
 
 ## Contributing

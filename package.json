@@ -1,7 +1,7 @@
 {
   "name": "social-network-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "social media app backend",
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
@@ -9,16 +9,17 @@
   },
   "devDependencies": {},
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/savbennett8/NoSQL-social-network-api.git"
+    "url": "git+https://github.com/matty-bennett/social-network-api.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/savbennett8/NoSQL-social-network-api/issues"
+    "url": "https://github.com/matty-bennett/social-network-api/issues"
   },
-  "homepage": "https://github.com/savbennett8/NoSQL-social-network-api#readme"
+  "homepage": "https://github.com/matty-bennett/social-network-api#readme"
 }

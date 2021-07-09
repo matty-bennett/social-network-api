@@ -1,6 +1,7 @@
 # social-network-api
 
 ## Description
+- Using MongoDb, I created the api routes for a social media application's backend. The routes include CRUD functionality for Users, Thoughts, Reactions to those thoughts, and the ability to add other Users to a User's friend list.
 
 ## Table of Contents
 * [Technologies Used](https://github.com/matty-bennett/social-network-api/blob/main/README.md#technologies-used)

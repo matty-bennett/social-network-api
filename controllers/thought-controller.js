@@ -32,13 +32,13 @@ const thoughtController = {
     // POST new thought
     createThought({body}, res) {
         Thought.create(body)
-            // .then(dbThoughtData => {
-            //     return User.findOneAndUpdate(
-            //         { _id: dbThoughtData.userId },
-            //         { $push: { thoughts: dbThoughtData._id } },
-            //         { new: true }
-            //     )
-            // })
+            .then(dbThoughtData => {
+                return User.findOneAndUpdate(
+                    { username: dbThoughtData.username  },
+                    { $push: { thoughts: dbThoughtData._id } },
+                    { new: true }
+                )
+            })
             .then(dbThoughtData => res.json(dbThoughtData))
             .catch(e => res.status(400).json(e));
     },
@@ -86,24 +86,27 @@ const thoughtController = {
             { $push: { reactions: body } },
             { new: true }
         )
-        .select('-__v')
-        .then(dbThoughtData => {
-            if (!dbThoughtData) {
-                res.status(404).json({ message: 'No thought found with that id' });
-                return;
-            }
-            res.json(dbThoughtData);
-        })
-        .catch(e => res.json(e));
+            // .select('-__v')
+            .then(dbThoughtData => {
+
+                if (!dbThoughtData) {
+                    res.status(404).json({ message: 'No thought found with that id' });
+                    return;
+                }
+                res.json(dbThoughtData);
+            })
+            .catch(e => res.json(e));
     },
     // delete reaction by id
     deleteReaction({params}, res) {
-        Thought.findOneAndUpdate(
-            { _id: params.id },
-            { $pull: { reactions: { reactionId: params.reactionId } } },
-            { new: true }
+        Thought.findOne(
+            { _id: params.thoughtId },
         )
-        .then((dbThoughtData) => res.json(dbThoughtData))
+        .then(dbThoughtData => {
+            dbThoughtData.reactions.pull(params.reactionId)
+            return dbThoughtData.save();
+        })
+        // .then((dbThoughtData) => res.json(dbThoughtData))
         .catch((err) => res.json(err));
     },
 };
